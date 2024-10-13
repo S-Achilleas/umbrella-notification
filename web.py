@@ -15,7 +15,7 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 def get_todays_weather():
     todays_weather = soup.find('div', class_="TodayWeatherCard--TableWrapper--wt2ea")
-    li_elements = todays_weather.find_all('li',class_ =["Column--column--gUiRn Column--verticalStack--k9S2a","Column--column--gUiRn Column--active--OWlqB Column--verticalStack--k9S2a"])
+    li_elements = todays_weather.find_all('li')
     for li in li_elements:
         weather = Hourly_Weather(li.text)
         print("Temperature: ",weather.get_temperature())
