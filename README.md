@@ -28,6 +28,8 @@ You can install the required Python packages using the following command:
 
 ```bash
 pip install requests beautifulsoup4
+```
+
 ## Installation
 1. Clone this repository:
     ```bash
