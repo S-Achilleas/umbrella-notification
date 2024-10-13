@@ -1,6 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
+class Hourly_Weather:
+    def __init__(self,html_content):
+        this.html_content = html_content
+    
+    def get_temperature(self):
+        temp = self.split('°')
+
 page = requests.get("https://weather.com/el-GR/weather/today/l/GRXX0004:1:GR")
 soup = BeautifulSoup(page.content, 'html.parser')
 
